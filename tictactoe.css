@@ -1,33 +1,147 @@
 
 body{
-    background-color: black;
+    background-color: #beb9db;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    font-family:cursive;
+    color: black;
 }
+
+.Box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 20px 25px 25px;
+    border-radius: 5px;
+    max-width: 330px;
+    width: 100%;
+    display: none;
+    
+    }
+
+    .Box ,.play-board{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        }
+
+    .play-board .details{
+        background: #fff;
+        padding: 7px;
+        border-radius: 5px;
+    }
+.title{
+    padding: 5px 0;
+    margin: 5px O;
+}
+    .play-board .details span{
+        width: 100%;
+        color:#beb9db;
+        border-radius: 5px;
+        padding: 7px 0;
+        font-size: 19px;
+        font-weight: 500px;
+        cursor: default;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    .details span:active{
+        color: #fff;
+        background: #beb9db;
+    }
+    .play-board .details .players{
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .details .slider{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        
+    }
+    .play-board section{
+        display: flex;
+    }
+
+    .Box h1{
+        font-size: 23px;
+        font-weight: 600px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+ 
+    .Box .title{
+        font-size: 18px;
+        font-weight: 500px;
+        margin: 20px 0;
+    }
+    .options button{
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500px;
+        padding: 8px 0;
+        border: none;
+        outline: none;
+       background: #beb9db;
+       border-radius: 5px;
+       color: #fff;
+       cursor: pointer;
+
+    }
+    .options button.player1{
+        margin-right: 5px;
+        
+    }
+    .options button.player2{
+        margin-left: 5px;
+        
+    }
+
+
+    .Box .options{
+        display: flex;
+        width: 100%;
+    }
+
+    .play-board{
+        
+        padding: 7px;
+        border-radius: 5px;
+
+    }
+  
 .board{
-    height: 200px;
+    height: 300px;
     width: 300px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-  
+    margin-top: 20px;
+
 }
-.cell{
+
+.case{
     border-bottom: 5px solid black;
     border-right: 5px solid black;
     font-size: 50px;
     text-align: center;
     line-height: 95px;
     cursor: pointer;
-    user-select: none;
     border-radius: 8px;
     margin: 4px;
     background-color: #fff;
 }
-.cell.highlight{
+.case.highlight{
     background-color: #f7b32c;
 }

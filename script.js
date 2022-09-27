@@ -23,24 +23,21 @@ function theWinner(currentPlayer){
     letlistWining.forEach(function(combination){
         let check = combination.every(index => buttons[index].innerText == currentPlayer )
         if(check){
-            if(currentPlayer == "X" ){
+            if(currentPlayer == "X"){
                   
                       winner.innerText=  localStorage.getItem("player1") +" " +`is winner`
                       checkwinner =1;
             }else{
                       winner.innerText= localStorage.getItem("player2") +" " + `is winner ` 
-                   checkwinner=1
+                      checkwinner=1
             } 
-                    
         }
     })
 }
 
 function game(){
-
 buttons.forEach(function(button ){
     button.addEventListener('click', function(){
-            
             localStorage.setItem("player1",jouer1.value);
             localStorage.setItem("player2",jouer2.value);
             
@@ -58,13 +55,10 @@ buttons.forEach(function(button ){
             }else{
                 currentPlayer = "X"; 
                 player.innerText = localStorage.getItem("player2");
-                 
             }
             theWinner(b)
-   
     })
 })
   
 }
-
 game();
